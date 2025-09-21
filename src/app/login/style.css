@@ -1,0 +1,79 @@
+.login-container {
+  font-family: Arial, sans-serif;
+  background: rgba(156, 156, 156, 0.1254901961);
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Work Sans";
+}
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.login-container .input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.login-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.login-container .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+.login-container .input-group input:focus {
+  border-color: black;
+}
+.login-container .password-wrapper {
+  position: relative;
+}
+.login-container .password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.login-container .btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+.login-container .btn:hover {
+  background: #0056b3;
+}
+.login-container .btn.btn-google {
+  background: #db4437;
+}
+.login-container .btn.btn-google:hover {
+  background: #a33428;
+}
+.login-container .link {
+  margin-top: 10px;
+  display: block;
+  color: #007bff;
+  cursor: pointer;
+}
+.login-container .link:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

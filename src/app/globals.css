@@ -1,0 +1,33 @@
+@import "tailwindcss";
+/* @plugin "daisyui"; */
+
+
+/* Default light mode */
+:root {
+    --bg-color: #0F0E0E;
+    --text-color: #EEEEEE;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    --bg-color: #EEEEEE;
+    --text-color: #0F0E0E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Example usage */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

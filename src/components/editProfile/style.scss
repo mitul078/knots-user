@@ -1,0 +1,381 @@
+// Variables
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+$text-dark: #374151;
+$text-light: #6b7280;
+$text-muted: #9ca3af;
+$border-light: #e5e7eb;
+$border-dashed: #d1d5db;
+$white: #ffffff;
+$black: #000000;
+$glass-bg: rgba(255, 255, 255, 0.95);
+$glass-border: rgba(255, 255, 255, 0.2);
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$focus-shadow: rgba(102, 126, 234, 0.1);
+$hover-shadow: rgba(102, 126, 234, 0.3);
+$danger-color: #ef4444;
+$success-color: #10b981;
+
+// Mixins
+@mixin glass-effect {
+    background: $glass-bg;
+    backdrop-filter: blur(20px);
+    border: 1px solid $glass-border;
+}
+
+@mixin smooth-transition($duration: 0.3s) {
+    transition: all $duration ease;
+}
+
+@mixin hover-lift {
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@mixin gradient-text {
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@mixin focus-state {
+    &:focus {
+        border-color: $primary-color;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 0 4px $focus-shadow;
+        outline: none;
+        opacity: 1;
+    }
+}
+
+@mixin button-base {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    @include smooth-transition;
+    @include hover-lift;
+}
+
+// Modal overlay
+.Edit-profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $overlay-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    @include smooth-transition;
+    padding: 20px;
+
+    &.visible {
+        opacity: 1;
+    }
+}
+
+// Form container
+.edit-form-container {
+    @include glass-effect;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9) translateY(20px);
+    @include smooth-transition;
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15);
+
+    &.visible {
+        transform: scale(1) translateY(0);
+    }
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(102, 126, 234, 0.3);
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(102, 126, 234, 0.5);
+    }
+}
+
+.f-box {
+    padding: 32px;
+}
+
+// Form header
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 16px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        @include gradient-text;
+        margin: 0;
+    }
+}
+
+.close-btn {
+    @include button-base;
+    background: rgba(239, 68, 68, 0.1);
+    color: $danger-color;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+
+    &:hover {
+        background: rgba(239, 68, 68, 0.2);
+        transform: scale(1.1);
+    }
+}
+
+// Form styles
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+        font-weight: 600;
+        color: $text-dark;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid $border-light;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    opacity: .6;
+    font-family: "Outfit";
+    @include smooth-transition;
+    @include focus-state;
+
+    &::placeholder {
+        color: $text-muted;
+    }
+
+    &.textarea {
+        resize: vertical;
+        min-height: 100px;
+        font-family: inherit;
+        line-height: 1.5;
+    }
+}
+
+// File input
+.file-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed $border-dashed;
+    border-radius: 16px;
+    padding: 24px 16px;
+    background: rgba(249, 250, 251, 0.8);
+    @include smooth-transition;
+    cursor: pointer;
+    min-height: 120px;
+
+    &:hover {
+        border-color: $primary-color;
+        background: rgba(102, 126, 234, 0.05);
+    }
+
+    &.drag-over {
+        border-color: $primary-color;
+        background: rgba(102, 126, 234, 0.1);
+        transform: scale(1.02);
+    }
+}
+
+.file-input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-input-content {
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+    background: $primary-gradient;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 18px;
+}
+
+.file-text {
+    font-weight: 600;
+    color: $text-dark;
+    font-size: 14px;
+}
+
+.file-subtext {
+    font-size: 12px;
+    color: $text-light;
+}
+
+.avatar-preview {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid $primary-color;
+}
+
+// Form actions
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: flex-end;
+}
+
+.cancel-btn {
+    @include button-base;
+    background: rgba(107, 114, 128, 0.1);
+    color: $text-light;
+
+    &:hover {
+        background: rgba(107, 114, 128, 0.2);
+        color: $text-dark;
+    }
+}
+
+.submit-btn {
+    @include button-base;
+    background: $primary-gradient;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: 0 8px 16px $hover-shadow;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover::before {
+        left: 100%;
+    }
+
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .Edit-profile {
+        padding: 16px;
+    }
+
+    .f-box {
+        padding: 24px 20px;
+    }
+
+    .form-header {
+        margin-bottom: 24px;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .form-actions {
+        flex-direction: column;
+
+        .cancel-btn,
+        .submit-btn {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-form-container {
+        max-height: 95vh;
+    }
+
+    .f-box {
+        padding: 20px 16px;
+    }
+
+    .profile-form {
+        gap: 20px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+}

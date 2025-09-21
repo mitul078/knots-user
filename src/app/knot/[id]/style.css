@@ -1,0 +1,376 @@
+.KnotDetail {
+  width: 100%;
+  height: calc(100% - 4rem);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.KnotDetail .knot-container {
+  width: 60%;
+  height: 100%;
+  background-color: #1c1c1c;
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container {
+    width: 100%;
+  }
+}
+.KnotDetail .knot-container .knot-header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .knot-header {
+    padding: 1rem;
+  }
+}
+.KnotDetail .knot-container .knot-header .arr {
+  border-radius: 50%;
+  padding: 0.1rem;
+  border: 1px solid #5a5a5a;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.KnotDetail .knot-container .knot-header .arr:hover {
+  scale: 1.2;
+}
+.KnotDetail .knot-container .knot-header .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.KnotDetail .knot-container .knot-header .head h1 {
+  font-size: 1.3rem;
+  font-family: "Work Sans";
+  font-weight: 400;
+  line-height: 1rem;
+}
+.KnotDetail .knot-container .knot-header .head p {
+  font-size: 1rem;
+  font-family: "Outfit";
+  font-weight: 200;
+}
+.KnotDetail .knot-container .knot-header .menu {
+  border-radius: 50%;
+  padding: 0.2rem;
+  border: 1px solid #5a5a5a;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.KnotDetail .knot-container .knot-header .menu:hover {
+  scale: 1.2;
+}
+.KnotDetail .knot-container .main-div {
+  width: 100%;
+  height: calc(100% - 3rem);
+  display: flex;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div {
+    flex-direction: column;
+  }
+}
+.KnotDetail .knot-container .main-div .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div .left {
+    width: 100%;
+  }
+}
+.KnotDetail .knot-container .main-div .left .knot-content {
+  margin-top: 1rem;
+  width: 100%;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  align-items: center;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-logo {
+  width: 3rem;
+  height: 3rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-username {
+  flex: 1;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-username h1 {
+  font-size: 1.3rem;
+  font-family: "Outfit";
+  line-height: 1.2rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-username h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-heading .user-username p {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-family: "Work Sans";
+  font-weight: 200;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail {
+  width: 100%;
+  margin-top: 1rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail p {
+  width: 90%;
+  font-size: 1.2rem;
+  font-family: "Outfit";
+  padding-left: 1rem;
+  opacity: 0.9;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div .left .knot-content .knot-detail p {
+    width: 100%;
+  }
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail .image-container {
+  max-width: 100%;
+  height: 13rem;
+  padding-left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail .image-container::-webkit-scrollbar {
+  display: none;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail .image-container .image {
+  flex-shrink: 0;
+  width: 13rem;
+  height: 100%;
+  border-radius: 1em;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-detail .image-container .image img {
+  cursor: pointer;
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-footer {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-footer .b {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-footer .b svg {
+  cursor: pointer;
+}
+.KnotDetail .knot-container .main-div .left .knot-content .knot-footer .b span {
+  font-family: "Outfit";
+  opacity: 0.7;
+  font-size: 1.5rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section {
+  width: 100%;
+  height: 5rem;
+  background-color: #4c4c4c;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section {
+  width: 100%;
+  display: flex;
+  background-color: #1a1a1a;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-image {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header {
+  flex: 1;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header h1 {
+  font-size: 1.2rem;
+  font-family: "Outfit";
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header .comment-handle {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header .comment-handle textarea {
+  width: 80%;
+  outline: none;
+  font-size: 1.2rem;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header .comment-handle button {
+  padding: 0.2rem 1rem;
+  background-color: #2c2c2c;
+  border-radius: 0.3em;
+  font-family: "Arimo";
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.KnotDetail .knot-container .main-div .left .knot-comment-section .comment-section .user-header .comment-handle button:hover {
+  background-color: #4c4c4c;
+}
+.KnotDetail .knot-container .main-div .right {
+  width: 50%;
+  overflow-y: auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div .right {
+    width: 100%;
+  }
+}
+.KnotDetail .knot-container .main-div .right::-webkit-scrollbar {
+  display: none;
+}
+.KnotDetail .knot-container .main-div .right .right-heading {
+  width: 100%;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  background-color: #1c1c1c;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div .right .right-heading {
+    justify-content: space-between;
+  }
+}
+.KnotDetail .knot-container .main-div .right .right-heading h1 {
+  font-size: 1.2rem;
+  order: 1;
+  font-weight: 600;
+  font-family: "Outfit";
+}
+@media (max-width: 768px) {
+  .KnotDetail .knot-container .main-div .right .right-heading h1 {
+    order: 0;
+  }
+}
+@media (min-width: 768px) {
+  .KnotDetail .knot-container .main-div .right .right-heading .toggle {
+    display: none;
+  }
+}
+.KnotDetail .knot-container .main-div .right .box {
+  width: 100%;
+  border-bottom: 1px solid #8c8c8c;
+  padding: 0.5rem 0;
+}
+.KnotDetail .knot-container .main-div .right .box .top {
+  width: 100%;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-logo {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-logo img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-info h1 {
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+  cursor: pointer;
+  font-weight: 400;
+  color: white;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-info h1:hover {
+  text-decoration: underline;
+}
+.KnotDetail .knot-container .main-div .right .box .top .header-section .user-info p {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-family: "Outfit";
+}
+.KnotDetail .knot-container .main-div .right .box .comment {
+  padding-left: 3rem;
+}
+.KnotDetail .knot-container .main-div .right .box .comment p {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-family: "Work Sans";
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+.KnotDetail .knot-container .main-div .right .box .comment .comment-footer {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.KnotDetail .knot-container .main-div .right .box .comment .comment-footer .b2 {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.Fallback {
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+  font-weight: 300;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

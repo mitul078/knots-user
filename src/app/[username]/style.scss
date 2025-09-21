@@ -1,0 +1,282 @@
+.UserProfile {
+    width: 100%;
+    height: 100%;
+
+    .container {
+        width: 100%;
+        height: 100%;
+
+        .user-info {
+            padding: .5rem;
+            width: 100%;
+
+            .top-layer {
+                display: flex;
+
+                .user-logo {
+                    flex-shrink: 0;
+                    width: 7rem;
+                    height: 7rem;
+
+                    @media (min-width:768px) {
+                        width: 20rem;
+                        height: 20rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    img {
+                        width: 90%;
+                        height: 90%;
+                        object-fit: cover;
+                        border-radius: 50%;
+
+                        @media (min-width:768px) {
+                            width: 70%;
+                            height: 70%;
+                        }
+                    }
+                }
+
+                .user-detail {
+                    width: calc(100% - 7rem);
+                    flex-shrink: 0;
+
+                    @media (min-width: 768px) {
+                        width: calc(100% - 40rem);
+                    }
+
+
+                    .header {
+                        width: 100%;
+                        height: 3rem;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h1 {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            font-family: "Outfit";
+                        }
+
+                        .menu {
+                            font-weight: 700;
+                            rotate: 180deg;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .count {
+                        width: 100%;
+                        height: 5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+
+                        .box {
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            span {
+                                font-family: "Outfit";
+                                font-weight: 900;
+                                font-size: 1.5rem;
+                            }
+
+                            h1 {
+                                font-family: "Work sans";
+                                font-size: 1rem;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+
+                    .request-box {
+                        width: 100%;
+                        height: 3rem;
+                        background-color: red;
+
+                        h1 {
+                            font-size: 1.2rem;
+                            font-family: "Work Sans";
+                        }
+                    }
+
+                    .EditBtn {
+                        background-color: #191919;
+                        border-radius: .5em;
+                        transition: all .3s ease;
+                        font-size: 1.2rem;
+                        padding: .3rem 1rem;
+                        font-weight: 600;
+                        font-family: "Work Sans";
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #202020;
+                        }
+                    }
+
+                    .btns {
+                        overflow-x: hidden;
+                        width: 100%;
+                        height: 5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        flex-wrap: nowrap;
+                        gap: 1rem;
+                        margin-bottom: 2rem;
+
+                        @media (min-width:768px) {
+                            justify-content: start;
+                        }
+
+
+                        .follow {
+                            background-color: #191919;
+                            border-radius: .5em;
+                            transition: all .3s ease;
+                            gap: 1rem;
+                            display: flex;
+
+                            .remove {
+                                padding: .5rem .3rem;
+                                font-size: 1.3rem;
+                                line-height: 1.4rem;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+
+                            &:hover {
+                                background-color: #202020;
+                            }
+                        }
+
+
+
+                        .delete {
+                            background-color: tomato;
+                            border-radius: .2em;
+                            padding: .1rem .3rem;
+                        }
+
+                        .message {
+                            border-radius: .5em;
+                            background-color: rgb(30, 30, 214);
+                            transition: all .3s ease;
+
+                            &:hover {
+                                background-color: rgb(40, 40, 220);
+                            }
+                        }
+
+
+
+                        button {
+                            cursor: pointer;
+                            padding: .2rem 1rem;
+                            font-size: 1.5rem;
+                            font-family: "Outfit";
+                            font-weight: 600;
+                        }
+                    }
+
+                    .window-bio-section {
+                        margin: 1rem 0;
+
+                        p {
+                            font-size: 1.2rem;
+                            font-family: "Work Sans";
+                            opacity: .8;
+                        }
+
+                        @media (max-width:768px) {
+                            display: none;
+                        }
+
+                    }
+
+                    .collaborate {
+                        width: 100%;
+                        height: 3rem;
+
+                        button {
+                            border-radius: .5em;
+                            cursor: pointer;
+                            height: 100%;
+                            width: 100%;
+                            background: linear-gradient(to left, #35577D, #141E30);
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            font-family: "Arimo";
+
+                            transition: all .3s ease;
+
+                            &:hover {
+                                background-color: rgb(125, 108, 240);
+                            }
+
+                        }
+                    }
+
+                    .friends {
+                        width: 100%;
+                        height: 3rem;
+                        margin: 1rem 0;
+
+                        button {
+                            border-radius: .5em;
+                            cursor: pointer;
+                            height: 100%;
+                            width: 100%;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            background: linear-gradient(to right, #28623A, #0F2027);
+                            font-family: "Outfit";
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            .lower-layer {
+                margin-top: 1rem;
+
+
+                .mobile-bio-section {
+                    padding: 1rem;
+
+                    @media (min-width:768px) {
+                        display: none;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        font-family: "Work Sans";
+                        opacity: .8;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+}

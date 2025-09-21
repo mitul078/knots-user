@@ -1,0 +1,120 @@
+.Search {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Search .search-container {
+  width: 60%;
+  height: 100%;
+  background-color: #1c1c1c;
+  padding: 0.5rem;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .Search .search-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+.Search .search-container .top-layer {
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  position: sticky;
+  top: 0;
+}
+.Search .search-container .top-layer .search-bar {
+  border-radius: 0.2em;
+  display: flex;
+  align-items: center;
+  background: #2c2c2c;
+  padding: 5px 10px;
+  width: 100%;
+  font-family: "Work Sans";
+}
+.Search .search-container .top-layer .search-bar .search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: transparent;
+  font-size: 16px;
+}
+.Search .search-container .top-layer .search-bar .search-btn {
+  background: #3c3c3c;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.Search .search-container .top-layer .search-bar .search-btn:hover {
+  background: #4c4c4c;
+}
+.Search .search-container .search-content {
+  width: 100%;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.Search .search-container .search-content:last-child {
+  padding-bottom: 4rem;
+}
+.Search .search-container .search-content .box {
+  flex-shrink: 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease-in;
+}
+.Search .search-container .search-content .box:hover {
+  background-color: #2c2c2c;
+  cursor: pointer;
+}
+.Search .search-container .search-content .box .left-side {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.Search .search-container .search-content .box .left-side img {
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.Search .search-container .search-content .box .left-side .info h1 {
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+  font-weight: 300;
+}
+.Search .search-container .search-content .box .left-side .info h1:hover {
+  text-decoration: underline;
+}
+.Search .search-container .search-content .box .left-side .info p {
+  font-size: 1rem;
+  font-family: "Work Sans";
+}
+.Search .search-container .search-content .box .right-side button {
+  font-size: 1.2rem;
+  font-family: "Outfit";
+  background-color: #3a3a3a;
+  padding: 0.2rem 1rem;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.Search .search-container .search-content .box .right-side button:hover {
+  background-color: #2c2c2c;
+}/*# sourceMappingURL=style.css.map */

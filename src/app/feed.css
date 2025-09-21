@@ -1,0 +1,43 @@
+.Feed {
+  width: 60%;
+  background-color: #1c1c1c;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+@media (max-width: 768px) {
+  .Feed {
+    width: 100%;
+  }
+}
+.Feed .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #1c1c1c;
+}
+.Feed .header h1 {
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Outfit";
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  .Feed .header h1 {
+    font-size: medium;
+  }
+}
+.Feed .header h1.active {
+  border-bottom: 3px solid #9c9c9c;
+}
+.Feed .knots-container {
+  margin-top: 1rem;
+  width: 100%;
+}/*# sourceMappingURL=feed.css.map */

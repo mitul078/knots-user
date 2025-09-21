@@ -1,0 +1,65 @@
+.List {
+  width: 100%;
+}
+.List .list-box {
+  width: 100%;
+  height: 4rem;
+  background-color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.List .list-box .b1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.List .list-box .b1 .avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.List .list-box .b1 .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.List .list-box .b1 .username h1 {
+  font-size: 1.3rem;
+  font-family: "Outfit";
+}
+.List .list-box .b1 .username h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.List .list-box .b2 button {
+  background-color: #1d1d1d;
+  font-size: 1.3rem;
+  font-family: "Arimo";
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.List .list-box .b2 button:hover {
+  background-color: #3c3c3c;
+}
+.List .list-box .date h1 {
+  font-size: 1rem;
+  font-family: "Work Sans";
+}
+.List .list-box .date span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.fallback {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Work Sans";
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */

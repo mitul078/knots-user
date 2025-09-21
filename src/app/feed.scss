@@ -1,0 +1,42 @@
+.Feed {
+    width: 60%;
+    background-color: #1c1c1c;
+    padding-bottom: 4rem;
+    margin: 0 auto;
+    border-radius: 1em;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 4rem;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: #1c1c1c;
+        h1 {
+            flex: 1;
+            cursor: pointer;
+            text-align: center;
+            font-family: "Outfit";
+            font-size: 1.5rem;
+            font-weight: 200;
+            @media (max-width: 768px) {
+                font-size: medium;
+            }
+            &.active {
+                border-bottom: 3px solid #9c9c9c;
+            }
+        }
+        
+
+    }
+
+    .knots-container {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}

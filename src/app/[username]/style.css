@@ -1,0 +1,234 @@
+.UserProfile {
+  width: 100%;
+  height: 100%;
+}
+.UserProfile .container {
+  width: 100%;
+  height: 100%;
+}
+.UserProfile .container .user-info {
+  padding: 0.5rem;
+  width: 100%;
+}
+.UserProfile .container .user-info .top-layer {
+  display: flex;
+}
+.UserProfile .container .user-info .top-layer .user-logo {
+  flex-shrink: 0;
+  width: 7rem;
+  height: 7rem;
+}
+@media (min-width: 768px) {
+  .UserProfile .container .user-info .top-layer .user-logo {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.UserProfile .container .user-info .top-layer .user-logo img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .UserProfile .container .user-info .top-layer .user-logo img {
+    width: 70%;
+    height: 70%;
+  }
+}
+.UserProfile .container .user-info .top-layer .user-detail {
+  width: calc(100% - 7rem);
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .UserProfile .container .user-info .top-layer .user-detail {
+    width: calc(100% - 40rem);
+  }
+}
+.UserProfile .container .user-info .top-layer .user-detail .header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.UserProfile .container .user-info .top-layer .user-detail .header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Outfit";
+}
+.UserProfile .container .user-info .top-layer .user-detail .header .menu {
+  font-weight: 700;
+  rotate: 180deg;
+  cursor: pointer;
+}
+.UserProfile .container .user-info .top-layer .user-detail .count {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.UserProfile .container .user-info .top-layer .user-detail .count .box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.UserProfile .container .user-info .top-layer .user-detail .count .box span {
+  font-family: "Outfit";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.UserProfile .container .user-info .top-layer .user-detail .count .box h1 {
+  font-family: "Work sans";
+  font-size: 1rem;
+}
+.UserProfile .container .user-info .top-layer .user-detail .count .box h1:hover {
+  text-decoration: underline;
+}
+.UserProfile .container .user-info .top-layer .user-detail .request-box {
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+}
+.UserProfile .container .user-info .top-layer .user-detail .request-box h1 {
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+}
+.UserProfile .container .user-info .top-layer .user-detail .EditBtn {
+  background-color: #191919;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  font-family: "Work Sans";
+}
+.UserProfile .container .user-info .top-layer .user-detail .EditBtn:hover {
+  cursor: pointer;
+  background-color: #202020;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns {
+  overflow-x: hidden;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .UserProfile .container .user-info .top-layer .user-detail .btns {
+    justify-content: start;
+  }
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .follow {
+  background-color: #191919;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+  gap: 1rem;
+  display: flex;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .follow .remove {
+  padding: 0.5rem 0.3rem;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .follow .remove:hover {
+  text-decoration: underline;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .follow:hover {
+  background-color: #202020;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .delete {
+  background-color: tomato;
+  border-radius: 0.2em;
+  padding: 0.1rem 0.3rem;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .message {
+  border-radius: 0.5em;
+  background-color: rgb(30, 30, 214);
+  transition: all 0.3s ease;
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns .message:hover {
+  background-color: rgb(40, 40, 220);
+}
+.UserProfile .container .user-info .top-layer .user-detail .btns button {
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  font-size: 1.5rem;
+  font-family: "Outfit";
+  font-weight: 600;
+}
+.UserProfile .container .user-info .top-layer .user-detail .window-bio-section {
+  margin: 1rem 0;
+}
+.UserProfile .container .user-info .top-layer .user-detail .window-bio-section p {
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .UserProfile .container .user-info .top-layer .user-detail .window-bio-section {
+    display: none;
+  }
+}
+.UserProfile .container .user-info .top-layer .user-detail .collaborate {
+  width: 100%;
+  height: 3rem;
+}
+.UserProfile .container .user-info .top-layer .user-detail .collaborate button {
+  border-radius: 0.5em;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, #35577D, #141E30);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Arimo";
+  transition: all 0.3s ease;
+}
+.UserProfile .container .user-info .top-layer .user-detail .collaborate button:hover {
+  background-color: rgb(125, 108, 240);
+}
+.UserProfile .container .user-info .top-layer .user-detail .friends {
+  width: 100%;
+  height: 3rem;
+  margin: 1rem 0;
+}
+.UserProfile .container .user-info .top-layer .user-detail .friends button {
+  border-radius: 0.5em;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #28623A, #0F2027);
+  font-family: "Outfit";
+}
+.UserProfile .container .user-info .top-layer .user-detail .friends button:hover {
+  text-decoration: underline;
+}
+.UserProfile .container .user-info .lower-layer {
+  margin-top: 1rem;
+}
+.UserProfile .container .user-info .lower-layer .mobile-bio-section {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .UserProfile .container .user-info .lower-layer .mobile-bio-section {
+    display: none;
+  }
+}
+.UserProfile .container .user-info .lower-layer .mobile-bio-section p {
+  font-size: 1.2rem;
+  font-family: "Work Sans";
+  opacity: 0.8;
+}/*# sourceMappingURL=style.css.map */
