@@ -14,7 +14,7 @@ export default function ProtectedRoute({ children }) {
     useEffect(() => {
         const initUser = async () => {
             try {
-                const res = await axios.get("/api/user/me", { withCredentials: true });
+                const res = await axios.get("/api/auth/me", { withCredentials: true });
                 if (res.status === 200 && res.data?.user) {
                     dispatch(setUser(res.data.user));
                 } else {
